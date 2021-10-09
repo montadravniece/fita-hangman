@@ -1,4 +1,6 @@
 from gameplay.game import Game
+import random
 
-game = Game('lopuhs')
+words = 'seja','zakis', 'ziepes'
+game = Game(random.choice(words))
 game.play() 
