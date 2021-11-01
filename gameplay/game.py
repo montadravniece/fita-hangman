@@ -15,8 +15,9 @@ class Game:
         
         
     def play (self):
-        user_name = str(input("Hello user. Please, enter your name!"))
-        print("Hello, ", user_name)
+        user_name = input("Hello user. Please, enter your name!")
+        print("Hello, ", user_name, '\n',  'Word: ', self.empty_word)
+        
 
         while self.lives != 0 and self.word_is_guessed == False:
             guess = input('Please type your letter: ').upper()

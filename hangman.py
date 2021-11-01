@@ -4,11 +4,17 @@ from nltk import word_tokenize
 
 
 with open('data/words.txt', 'r', encoding='utf-8') as file:
-    words = file.read()
-    words = word_tokenize(words)
-    # words = list(words.split("\n"))
+    file_contents = file.read()
+    
+    for i in file_contents:
+        if i is not '\n': print(i)
+    
+    # words = word_tokenize(words)
+    words = list(file_contents.split("\n"))
+    
     # random.choice(word)
-    # word = list(word)
+    # word = list(word)monta
+    
     # word.pop()
     #words = file.read()
     #words = word_tokenize(words)
