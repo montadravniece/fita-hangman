@@ -14,7 +14,7 @@ print(difficulty_info)
 while True:
     difficulty = input("Please, chose your game difficulty level (easy/medium/hard) : ")
 
-    if difficulty == 'easy' :
+    if difficulty == 'easy':
         with open('fita-hangman/data/easy_words.txt', 'r', encoding='utf-8') as file:
             file_contents = file.read()
             break
