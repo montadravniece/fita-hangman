@@ -1,50 +1,71 @@
-with open('data/words.txt', 'r', encoding='utf-8') as file: 
-  words_all = file.read()
+class name_user:
+  user_name = input("Hello user. Please, enter your name!")
 
-words_split = []
-words_split = words_all.split("\n")
+class Dificulty:
 
-easy_words = []
-medium_words = []
-hard_words = []
+  def __init__ (self, words_all):
+    self.words_all = words_all
 
-hard_letters = ['Ā', 'Č', 'Ē', 'Ģ', 'Ī', 'Ķ', 'Ļ', 'Ņ', 'Š', 'Ū', 'Ž']
+  def diff (self):
+    with open('fita-hangman\data\words.txt', 'r', encoding='utf-8') as file: 
+      words_all = file.read()
 
-#### cikls, kas izveido jaunu sarakstu ar vārdiem, kuros ir 'grūtie' burti
-# for words in words_split:
-#     for character in hard_letters:
-#         if character in words:
-#             hard_words.append(words)
-####
+    words_split = []
+    words_split = words_all.split("\n")
+
+    easy_words = []
+    medium_words = []
+    hard_words = []
+
+    hard_letters = ['Ā', 'Č', 'Ē', 'Ģ', 'Ī', 'Ķ', 'Ļ', 'Ņ', 'Š', 'Ū', 'Ž']
+
+    ######## izveido vārdnīcu -> katram vārdam unikālo simbolu skaits
+    # unique_count_word = {}
+    # for word in words_split:
+    #   unique_count_word[word] = len(set(word))
+
+    # print(unique_count_word)
+    ########
+
+    #### dificulty 4
+    for words in words_split:
+      for character in hard_letters:
+        if character in words and len(words) < 7:
+          hard_words.append(words)
+
+    ### dificulty 3
+    for words in words_split:
+      for character in hard_letters:
+        if character in words and len(words) > 6:
+          medium_words.append(words)
+
+    #### difficulty 
+    a = set(words_split)
+    b = set(hard_words)
+    c = set(medium_words)
+    easy_words = a - b - c
 
 
-######## izveido vārdnīcu -> katram vārdam unikālo simbolu skaits
-unique_count_word = {}
-for word in words_split:
-  unique_count_word[word] = len(set(word))
-
-print(unique_count_word)
-########
 
 
-#### cikls, kas vienkārši sadala visus vārdus 3 sarežģītības pakāpēs tikai pēc vārda garuma
-for word in words_split:
-  if len(word) < 4:
-    easy_words.append(word)
-  elif len(word) > 14:
-    hard_words.append(word)
-  else:
-    medium_words.append(word)
-####
+    #### cikls, kas vienkārši sadala visus vārdus 3 sarežģītības pakāpēs tikai pēc vārda garuma
+    # for word in words_split:
+    #   if len(word) > 6:
+    #     easy_words.append(word)
+    #   elif len(word) > 14:
+    #     hard_words.append(word)
+    #   else:
+    #     medium_words.append(word)
+    # ####
 
-print(easy_words)
+    # print(easy_words)
 
 
-with open('data/easy_words.txt', 'w', encoding='utf-8') as file: 
-  file.write(easy_words)
+    with open('fita-hangman\data\easy_words.txt', 'w', encoding='utf-8') as file: 
+      file.write(str(easy_words))
 
-with open('data/medium_words.txt', 'w', encoding='utf-8') as file:
-  file.write(medium_words)
+    with open('fita-hangman\data\medium_words.txt', 'w', encoding='utf-8') as file:
+      file.write(str(medium_words))
 
-with open('data/hard_words.txt', 'w', encoding='utf-8') as file:
-  file.write(hard_words)
+    with open('fita-hangman\data\hard_words.txt', 'w', encoding='utf-8') as file:
+      file.write(str(hard_words))

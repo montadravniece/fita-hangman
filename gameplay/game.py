@@ -1,3 +1,4 @@
+from scripts.split_difficulty import name_user
 class Game:
     def __init__(self, word):
         self.word = word.upper()
@@ -15,8 +16,8 @@ class Game:
         
         
     def play (self):
-        user_name = input("Hello user. Please, enter your name!")
-        print("Hello, ", user_name, '\n',  'Word: ', self.empty_word)
+
+        print("Hello, ", name_user(), '\n',  'Word: ', self.empty_word)
         
 
         while self.lives != 0 and self.word_is_guessed == False:
@@ -61,10 +62,10 @@ class Game:
                         print('Wrong!', self.empty_word, '\n', 'Guess: ', self.guessed_letters, '\n', 'Missed: ', self.missed_letters, '\n', 'Missed words: ', self.missed_words, '\n', 'Lives: ', self.lives)
                 else:
                     if length_of_guess > self.length_of_word and guess.isalpha():
-                        print("Sorry, ", user_name, "the word you entered is too long!")
+                        print("Sorry, ", name_user(), "the word you entered is too long!")
                         print(self.empty_word, '\n', 'Guess: ', self.guessed_letters, '\n', 'Missed: ', self.missed_letters, '\n', 'Missed words: ', self.missed_words, '\n', 'Lives: ', self.lives)
                     elif length_of_guess < self.length_of_word and guess.isalpha():
-                        print("Sorry, ", user_name, "the word you entered is too short!")
+                        print("Sorry, ", name_user(), "the word you entered is too short!")
                         print(self.empty_word, '\n', 'Guess: ', self.guessed_letters, '\n', 'Missed: ', self.missed_letters, '\n', 'Missed words: ', self.missed_words, '\n', 'Lives: ', self.lives)
                     else:
                         print("Wrong input type!")

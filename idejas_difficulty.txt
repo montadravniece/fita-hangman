@@ -1,0 +1,32 @@
+ Alfabēts: Aa, Āā, Bb, Cc, Čč, Dd, Ee, Ēē, Ff, Gg, Ģģ, Hh, Ii, Īī, Jj, Kk, Ķķ, Ll, Ļļ, Mm, Nn, Ņņ, Oo, Pp, Rr, Ss, Šš, Tt, Uu, Ūū, Vv, Zz, ž. (33)
+
+
+Vārdu sarežģītība: 
+    1. Unikālo simbolu skaits ( nepieciešamais minējumu skaits )
+    2. Proporcija: Unikālie simboli/ vārda garums? 
+    3. Vārda garums?
+    4. Patskaņu skaits vārdā/proporcija pret vārda garumu VAI  patskaņu skaits vārdā/proporcija no kopējā patskaņu skaita VAI  9 - skaits vārdā ;  Skaits vārdā/9  ; skaits vārdā/vārda garums (viss unikālo patskaņu līmenī) (a, i, e, u, ā, o, ī, ē, ū ) (9) 
+    5. Burta lietojums valodā: https://www.valodaskonsultacijas.lv/uploads/suggested_sources/12/pdf/ValodasPrakse_Nr12.pdf
+25 lpp burtu rangs
+    6. Alternatīva 5. - burta lietojums tieši vārdu izlasē
+    7. spēlēt un saglabāt rezultātus -> no rezultātiem novērtēt sarežģītību :) 
+    Alfabēts: Aa, Āā, Bb, Cc, Čč, Dd, Ee, Ēē, Ff, Gg, Ģģ, Hh, Ii, Īī, Jj, Kk, Ķķ, Ll, Ļļ, Mm, Nn, Ņņ, Oo, Pp, Rr, Ss, Šš, Tt, Uu, Ūū, Vv, Zz, Žž. (33)
+
+
+
+
+
+
+1. Vārda garums (nav viennozīmīgi, jo – burti primāri)
+2. Burtu atkārtošanās biežums gan visā kopā, gan konkrētajā vārdā
+3. Burtu ranžēšana pēc izmantošanas biežuma
+4. Vajadzētu visu 700 vārdu kopu pārvērst vienā str un tad sadalīt pa burtiem (cik bieži tie atkārtojas) 
+un tad piešķirt vērtības burtiem (visvairāk atkārtojas - easy – 1, vidēji - medium – 2,  visretāk - hard – 3).
+Pēc tam visā vārdu kopā katram vārdam jāsaskaita, kādu summu sastāda vārds (saskaitot tā burtu ‘biežuma’ koeficientus).
+Jo lielāka kopējā vārda vērtība, jo sarežģītāks vārds.
+Visbeidzot visus 700 vārdus, kuriem ir noteikta vērtība, sadalīt trīs grupās.
+
+https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
+Funkcija ar count () – bet tad tā ir 33 reizes jādara?
+
+https://pythonexamples.org/python-count-number-of-characters-in-text-file/
