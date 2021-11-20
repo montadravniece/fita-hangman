@@ -1,13 +1,10 @@
-class name_user:
-  user_name = input("Hello user. Please, enter your name!")
-
 class Dificulty:
 
   def __init__ (self, words_all):
     self.words_all = words_all
 
   def diff (self):
-    with open('fita-hangman\data\words.txt', 'r', encoding='utf-8') as file: 
+    with open('data/words.txt', 'r', encoding='utf-8') as file: 
       words_all = file.read()
 
     words_split = []
@@ -62,10 +59,10 @@ class Dificulty:
 
 
     with open('fita-hangman\data\easy_words.txt', 'w', encoding='utf-8') as file: 
-      file.write(str(easy_words))
+      file.write(str(set(easy_words)))
 
     with open('fita-hangman\data\medium_words.txt', 'w', encoding='utf-8') as file:
-      file.write(str(medium_words))
+      file.write(str(set(medium_words)))
 
     with open('fita-hangman\data\hard_words.txt', 'w', encoding='utf-8') as file:
-      file.write(str(hard_words))
+      file.write(str(set(hard_words)))

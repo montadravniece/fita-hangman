@@ -1,7 +1,7 @@
 import random
 
 user_name = str(input("Hello user. Please, enter your name!"))
-print("Hello, ", user_name)
+print("Hello, ", user_name ,"\U0001f600"),
 
 # game variables
 

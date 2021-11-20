@@ -21,3 +21,5 @@ with open('data/words.txt', 'r', encoding='utf-8') as file:
     print(len(easy_words))
     print(len(medium_words))
     print(len(hard_words))
+    
+    
